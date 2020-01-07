@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>flowers</title>
+		<link rel="stylesheet" type="text/css" href="css/normalize.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/jquery.wm-zoom-1.0.min.css">
+	</head>
+	<body>
+		<header>
+			<i class="fas fa-bars" id="ham-bar" onclick="menu()"></i>
+			<nav id="nav">
+				
+				<ul class="mainnav">
+					<li id="li"><a href="#">HOME</a></li>
+					<li id="li"><a href="#NEW">NEW ARRIVALS</a></li>
+					<li id="li"><a href="#product">PRODUCTS</a></li>
+					<li id="li"><a href="#steps">HOW WE WORK</a></li>
+					<li class="serv" id="li"><a href="#ABOUT" >ABOUT</a>
+						<!--<section class="services">
+							<h3>link1</h3>
+							<h3>link2</h3>
+							<h3>link3</h3>
+							<h3>link4</h3>
+							<h3>link5</h3>
+							<h3>link6</h3>
+
+						</section>-->
+		
+					</li>
+					<li><a href="#contact" id="li">CONTACT</a></li>
+					<li><a href="login.html" id="li">LOGIN</a>
+						
+						<form action="" method="post" class="formclass">
+							<fieldset>
+								<legend>login</legend>
+								<label for="userName">User Name</label>
+								<input type="text" name="userName" placeholder="User Name..." id="userName">
+								<label for="pass">password</label>
+								<input type="password" name="pass" placeholder="password..." id="pass">
+								<input type="submit" name="submit" value="login">	
+							</fieldset>
+						</form>
+					</li>
+					<li id="cartpool" onclick="showCart()"><span  style="color: tomato; width: 50%;  border: 1px solid tomato; border-radius: 50px;   margin:0 0 0 30px; padding:4px 10px; font-size:18px;" class="shopping-cart">
+						<i class="fas fa-cart-plus"></i></span>
+						<span id="count" data-pool="cartpool" style="color: tomato; font-weight: bold; margin-left: 4px;"></span>
+					</li>
+					<li>
+						<span id="searchcount"></span>
+					</li>
+                    <li id="search">
+						
+						<input type="search" placeholder=" Search"  id="searchEngine">
+						<i class="fas fa-search"></i>
+					</li>
+				</ul>
+			</nav>	
+			<ul class="searchResults">
+				
+			</ul>
+		</header>
+		<!-- *************************	Cart	*************************  -->
+		<section class="border">
+			<section class="cart-shopping" id="cart-shopping">
+				<p style="margin: 10px auto;text-align: center; font-weight: bold; background: #757575; color: white; height: 40px; line-height: 40px;">My Products</p>
+				<section style="width: 50%; margin: 0 auto;height: 30px; color: white; background: #1ec46b; text-align: center; line-height: 30px; cursor: pointer; border-radius: 5px 5px 0 0; box-shadow: 0 -3px 5px #777" onclick="clearCart()"><i class="fas fa-trash-alt"> </i> clear</section>
+			</section>
+			<!--***************************************************************************************************-->
+			<!--**************************************	SLIDER	***********************************-->
+				<div class="slideshow-container">
+
+				<div class="mySlides fade">
+				  <div class="numbertext">1 / 3</div>
+				  <img src="img/slider1.jpg" style="width:100%">
+				  <div class="text">Alegum malesauda1</div>
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">2 / 3</div>
+				  <img src="img/slider2.jpg" style="width:100%">
+				  <div class="text">Alegum malesauda2</div>
+				</div>
+
+				<div class="mySlides fade">
+				  <div class="numbertext">3 / 3</div>
+				  <img src="img/slider3.jpg" style="width:100%">
+				  <div class="text">Alegum malesauda3</div>
+				</div>
+
+				<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+				<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+				</div>
+				<br>
+
+				<div style="margin-left: 48%;">
+				  <span class="dot" onclick="currentSlide(1)"></span> 
+				  <span class="dot" onclick="currentSlide(2)"></span> 
+				  <span class="dot" onclick="currentSlide(3)"></span> 
+				</div>
+		
+		<!--***************************************************************************************************-->
+		<!--*******************************	NEW ARRIVALS	*****************************************-->
+		<section class="newArrivels" id="NEW">
+			<p class="titleArrivals"> new arrivals</p>
+			<section class="groupArrivel wm-zoom-container my-zoom-2" id="newArrival">
+				<section class="wm-zoom-box item" >		
+					<img src="img/arived1.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived1.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">200$</span>
+					</p>
+					<section data-cart="cart"  id="cart" class="add-to-cart">add to cart</section>
+						
+				</section>	
+			</section>
+			<section class="groupArrivel wm-zoom-container my-zoom-2">
+				<section class="wm-zoom-box item" >
+					<img src="img/arived2.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived2.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">90$</span>
+					</p>	
+					<section data-cart="cart" id="cart" >add to cart</section>
+				</section>	
+			</section>
+			<section class="groupArrivel wm-zoom-container my-zoom-2">
+				<section class="wm-zoom-box item">	
+					<img src="img/arived3.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived3.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">80$</span>
+					</p>	
+					<section data-cart="cart" id="cart" >add to cart</section>
+				</section>	
+			</section>
+			<section class="groupArrivel wm-zoom-container my-zoom-2">
+				<section class="wm-zoom-box item">
+					<img src="img/arived4.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived4.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">50$</span>
+					</p>	
+					<section data-cart="cart"  id="cart">add to cart</section>
+				</section>	
+			</section>
+			<section class="groupArrivel wm-zoom-container my-zoom-2">
+				<section class="wm-zoom-box item">	
+					<img src="img/arived5.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived5.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">150$</span>
+					</p>	
+					<section data-cart="cart"  id="cart" >add to cart</section>
+				</section>	
+			</section>
+			<section class="groupArrivel wm-zoom-container my-zoom-2">
+				<section class="wm-zoom-box item">
+					<img src="img/arived6.jpg" class="arrivedImg wm-zoom-default-img" data-hight-src="img/arived6.jpg" data-loader-src="img/loader.gif">
+					<img src="img/selected-01.png" class="selectedd" id="selectedd">
+					<p class="info">
+						<span class="left">the persimmon</span>
+						<span class="right">110$</span>
+					</p>	
+					<section data-cart="cart"  id="cart">add to cart</section>
+				</section>	
+			</section>
+		<!--***************************************************************************************************-->
+			<section class="productsTypes" id="product">
+				<p class="headP">our products</p>
+				<section class="pType">
+					<section class="typeHover" id="hoverP"></section>
+					<img src="img/slider1.jpg" class="pIMG" id="productimg">
+					<p class="titleP1"> flowers </p>
+					<p class="titleP2"> we have alot of kinds of flowers </p>
+					<p class="titleP3"> show </p>
+				</section>
+				<section class="pType">
+					<section class="typeHover"></section>
+					<img src="img/slider3.jpg" class="pIMG">
+					<p class="titleP1"> planet </p>
+					<p class="titleP2"> we have alot of kinds of flowers </p>
+					<p class="titleP3"> show </p>
+				</section>
+					<section class="pType">
+					<section class="typeHover"></section>
+					<img src="img/slider2.jpg" class="pIMG">
+					<p class="titleP1"> vogue </p>
+					<p class="titleP2"> we have alot of kinds of flowers </p>
+					<p class="titleP3"> show </p>
+				</section>
+			
+			</section>
+		
+		</section>
+			<section class="howItWork" id="steps">
+				<p class="howTitle">How It Works</p>
+				<section class="step1">
+					<section class="stepSide1">
+						<img src="img/step1.jpg" class="stepImg">
+					</section>
+					<section class="stepSide1">	
+						<p class="stepTitle"><span>1</span>Schedule Your Gift</p>
+						<p class="stepDetails">Choose weekly, bi-weekly, or monthly deliveries, and we’ll take care of the rest.</p>
+					</section>	
+				</section>
+				<section class="step1">
+					<section class="stepSide2">
+						<img src="img/step2.jpg" class="stepImg">
+					</section>
+					<section class="stepSide2">	
+						<p class="stepTitle"><span>2</span>We Pick The Stems</p>
+						<p class="stepDetails">We’ll send one of our best-selling bouquets curated by our floral experts.</p>
+					</section>	
+				</section>
+				<section class="step1">
+					<section class="stepSide1">
+						<img src="img/step3.jpg" class="stepImg">
+					</section>
+					<section class="stepSide1">	
+						<p class="stepTitle"><span>3</span>Happiness on Repeat</p>
+						<p class="stepDetails">Show your recipient just how much you care with a unique bouquet over and over again.</p>
+					</section>	
+				</section>
+			</section>
+			<section class="aboutUs" id="ABOUT">
+				<p class="aboutTitle"> about us</p>
+				<h1>More Than Just Flowers</h1>
+				<p>At UrbanStems, we work tirelessly to create the perfect gifting experience. When it comes to making someone’s day, no detail is too small.</p>
+			
+			</section>
+		</section>
+		
+		<footer>
+			<section class="footer" id="contact">
+			<form method="post" class="endform">
+				<input type="text" placeholder=" name">
+				<input type="text" placeholder=" phone">
+				<input type="text" placeholder=" email">
+				<input type="submit" value="submit">
+			</form>
+			</section>
+			<section class="footer">
+					<textarea></textarea>
+			</section>
+			<p>flowers copyright @2019</p>
+		</footer>
+		<script type="text/javascript" src="js/js.js"></script>
+		<script type="text/javascript" src="js/all.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+		<script type="text/javascript" src="js/jquery.wm-zoom-1.0.min.js"></script>
+		
+		<script>
+//			var projects = [
+//    {
+//      "category": "Shrubs",
+//      "price": 15.99,
+//      "instructions": "Large double. Good grower, heavy bloomer. Early to mid-season, acid loving plants. Plant in moist well drained soil with pH of 4.0-5.5.",
+//      "photo": "california_snow.jpg",
+//      label: "Azalea",
+//      "productId": 1
+//    }];
+//			$(function() {
+//              $( "#searcheee" ).autocomplete({
+//               source: projects,
+//               minLength:2,
+//				focus: function( event, ui ) {
+//                  $( "#searcheee" ).val( ui.item.label );
+//                     return false;}
+//				  
+//            });
+//				 $( "#searcheee" ).autocomplete("option", "position",
+//               { my : "left-20 top+80", at: "left top" })
+//         });
+//	
+			/***********************************************************************************/
+	$(document).ready(function(){
+		var im="img/arived1.jpg";
+		/********************** live search*********************/
+		$("#searchEngine").keyup(function(){
+			$(".searchResults").html('');
+			var searchField=$('#searchEngine').val();
+			var expression=new RegExp(searchField,"i");
+			$.getJSON('flowers.json',function(data){
+				var counter=0;
+				$.each(data,function(key,val){
+					if(val.name.search(expression)!=-1){
+						counter++;
+						document.querySelector('.searchResults').style.display='block';
+						document.querySelector('#searchcount').innerHTML=counter+"Result";
+						$(".searchResults").append('<li><img src='+im+'><p>'+val.name+'</p></li>');
+					}
+				});
+			});
+		});
+		/*****************************************************/
+		
+				$('.my-zoom-1').WMZoom();
+				$('.my-zoom-2').WMZoom({
+					config : {
+						inner : true
+					}
+				});
+			});
+			
+			var hamBar=document.getElementById("ham-bar");
+			var counter=0;
+			function menu(){
+				
+				if(counter%2==0){
+				document.getElementById("nav").style.display="block";
+				}
+				else{
+					document.getElementById("nav").style.display="none";
+				}
+				counter++;
+					
+			};
+			/***********************************************************************/
+			var cart = '[data-cart="cart"]';
+			var pool='[data-pool="cartpool"]';
+			var none='[data-none="none"]';
+			var cartBtn=document.querySelector(cart);
+			var cartpool=document.querySelector(pool);
+			var saleded=document.querySelector(none);
+			var counts=0;
+			
+			function addflower(){	
+				counts++;
+				cartpool.textContent=counts;
+					}
+			
+			
+			
+		function getflowerArray() {
+			'use strict';
+			var	flower = document.querySelectorAll(cart);
+			var	flowerArray = [].slice.call(flower);
+			return	flowerArray; 
+		}
+			
+
+			function initializeEvents()	{
+				'use strict';
+				var	flowers = getflowerArray();
+				flowers.forEach(addThumbClickHandler);
+			}
+			var myObj={"cart":[]};
+			function addThumbClickHandler(thumb) {
+					'use strict';
+					
+					thumb.addEventListener('click',	function (event) {
+						
+						event.preventDefault();
+						addflower();
+						this.innerHTML="selected";
+						this.style.pointerEvents="none";
+						this.style.color="red";
+						this.style.border="1px solid red";
+						this.parentNode.childNodes.item(4).style.visibility="visible";
+						var fullpath=this.parentNode.childNodes.item(2).src,
+							pos=fullpath.indexOf('img'),
+							partpath=fullpath.slice(pos),
+							name=this.parentNode.childNodes.item(6).childNodes[1].textContent,
+							price=this.parentNode.childNodes.item(6).childNodes[3].textContent;
+						
+						myObj['cart'].push({ "name":name, "path":partpath, "price":price });
+						var myJSON = JSON.stringify(myObj);
+						localStorage.setItem("testJSON", myJSON);
+						
+					
+						console.log(price);
+						console.log(partpath);
+						console.log(name);
+							
+					var section=document.createElement("section"),
+						span=document.createElement("span"),
+						span2=document.createElement("span"),
+						span3=document.createElement("span"),
+						i=document.createElement("i"),
+						input=document.createElement("input"),
+						img=document.createElement("img"),
+						label=document.createElement("label");
+
+					var cartArea=document.getElementById("cart-shopping");
+
+					var attrinput=document.createAttribute("type");
+					var attrinput2=document.createAttribute("id");
+					var attrinput3=document.createAttribute("onclick");	
+					var attrclass=document.createAttribute("class");
+					var attrsrc=document.createAttribute("src");
+					var attrval=document.createAttribute("value");
+					var attri=document.createAttribute("calss");
+					var attri2=document.createAttribute("id");
+					var attrspan1=document.createAttribute("style");	
+					var attri3=document.createAttribute("onclick");	
+					
+					var textnode=document.createTextNode(name);
+					var textnode2=document.createTextNode(price);
+					var textnode3=document.createTextNode("quentity");
+						
+
+					attrinput.value="number";
+					attrinput2.value="cal";
+					attrinput3.value="calc()";	
+					attrclass.value="cart-item";
+					attrsrc.value=partpath;
+					attrval.value="1";
+					attri.value="far fa-trash-alt";
+					attri2.value="del";	
+					attri3.value="del()";	
+					/*attrspan1.value="color: tomato; border: 1px solid tomato; border-radius: 50px;   margin:0 0 0 30px; padding:4px 10px; font-size:18px";		
+					*/
+					input.setAttributeNode(attrinput);
+					input.setAttributeNode(attrval);
+					input.setAttributeNode(attrinput2);
+					input.setAttributeNode(attrinput3);	
+					section.setAttributeNode(attrclass);
+					img.setAttributeNode(attrsrc);
+					i.setAttributeNode(attri);	
+					i.setAttributeNode(attri2);
+					i.setAttributeNode(attri3);	
+					//span3.setAttributeNode(attrspan1);	
+					span.appendChild(textnode);
+					span2.appendChild(textnode2);
+					label.appendChild(textnode3);
+					
+						
+					cartArea.appendChild(section);
+					cartArea.insertBefore(section, cartArea.childNodes[cartArea.childNodes.length-3]);
+					section.appendChild(img);
+					section.appendChild(span);
+					section.appendChild(span2);	
+					section.appendChild(label);
+					section.appendChild(input);
+				/*	section.appendChild(span3);
+					span3.appendChild(i);	
+*/
+					});
+				} 
+			function del(){
+                var del=document.getElementById("del");
+       			var parent=del.parentElement.parentElement;
+				parent.parentElement.removeChild(parent);
+            }      
+			function calc(){
+				var sum=this.parentNode.childNodes.item(6).childNodes[3].textContent;
+				console.log(sum);
+				sum=(this.value*sum)+"$";
+			}
+			var countcartshopping=0;
+          	function showCart(){
+				var	cartShopping=document.getElementById("cart-shopping");
+				if(countcartshopping%2===0)
+					{
+						cartShopping.style.cssText="transform: translateX(1000px);"
+					}
+				else{
+						cartShopping.style.cssText="transform: translateX(-500px) scale(-1,1);"
+				}
+				countcartshopping++;
+				
+			}
+			initializeEvents();
+			
+			(function(){
+				
+				if(localStorage.getItem("testJSON")!=null){
+				text = localStorage.getItem("testJSON");
+				obj = JSON.parse(text);
+				//console.log(obj.cart);
+					for(x in obj.cart){
+						addflower();
+					console.log(obj.cart[x].name);
+					console.log(obj.cart[x].price);
+					console.log(obj.cart[x].path);
+						var section=document.createElement("section"),
+						span=document.createElement("span"),
+						span2=document.createElement("span"),
+						span3=document.createElement("span"),
+						i=document.createElement("i"),
+						input=document.createElement("input"),
+						img=document.createElement("img"),
+						label=document.createElement("label");
+
+					var cartArea=document.getElementById("cart-shopping");
+
+					var attrinput=document.createAttribute("type");
+					var attrinput2=document.createAttribute("id");
+					var attrinput3=document.createAttribute("onclick");	
+					var attrclass=document.createAttribute("class");
+					var attrsrc=document.createAttribute("src");
+					var attrval=document.createAttribute("value");
+					var attri=document.createAttribute("calss");
+					var attri2=document.createAttribute("id");
+					var attrspan1=document.createAttribute("style");	
+					var attri3=document.createAttribute("onclick");	
+					
+					var textnode=document.createTextNode(obj.cart[x].name);
+					var textnode2=document.createTextNode(obj.cart[x].price);
+					var textnode3=document.createTextNode("quentity");
+						
+
+					attrinput.value="number";
+					attrinput2.value="cal";
+					attrinput3.value="calc()";	
+					attrclass.value="cart-item";
+					attrsrc.value=obj.cart[x].path;
+					attrval.value="1";
+					attri.value="far fa-trash-alt";
+					attri2.value="del";	
+					attri3.value="del()";	
+					/*attrspan1.value="color: tomato; border: 1px solid tomato; border-radius: 50px;   margin:0 0 0 30px; padding:4px 10px; font-size:18px";		
+					*/
+					input.setAttributeNode(attrinput);
+					input.setAttributeNode(attrval);
+					input.setAttributeNode(attrinput2);
+					input.setAttributeNode(attrinput3);	
+					section.setAttributeNode(attrclass);
+					img.setAttributeNode(attrsrc);
+					i.setAttributeNode(attri);	
+					i.setAttributeNode(attri2);
+					i.setAttributeNode(attri3);	
+					//span3.setAttributeNode(attrspan1);	
+					span.appendChild(textnode);
+					span2.appendChild(textnode2);
+					label.appendChild(textnode3);
+					
+						
+					cartArea.appendChild(section);
+					section.appendChild(img);
+					section.appendChild(span);
+					section.appendChild(span2);	
+					section.appendChild(label);
+					section.appendChild(input);
+				/*	section.appendChild(span3);
+					span3.appendChild(i);	*/
+					}
+				}
+				else{
+					console.log("no product in cart ");
+				}
+			})();
+			
+			function clearCart(){
+				
+				localStorage.removeItem("testJSON");
+				$('.cart-item').each(function(){
+				 
+					$(this).remove();
+				  
+				});
+				
+				
+			}
+			/**************************************************************************************/
+			/*
+	Add to cart fly effect with jQuery. - May 05, 2013
+	(c) 2013 @ElmahdiMahmoud - fikra-masri.by
+	license: https://www.opensource.org/licenses/mit-license.php
+*/   
+//var output="" ;
+//var count;
+//
+//			
+//document.getElementById("searchEngin").addEventListener("input",function() {				
+//				$.getJSON("flowers.json",function(value){
+//					var im="img/arived1.jpg";
+//					$.each(value.flowerlist,function (index, val) {
+//						if(val.name.match(document.getElementById("searchEngin").value))
+//							output+='<li><img src='+im+'><p>'+val.name+'  ' +val.price+'</p></li>';
+//					});
+//				});
+//		$(".searchResults").append(output);
+//});
+			 
+		</script>
+	</body>
+</html>
